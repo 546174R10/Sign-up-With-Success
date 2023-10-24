@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=Roboto:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+:root{
+
+    --Tomato: hsl(4, 100%, 67%);
+     --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
