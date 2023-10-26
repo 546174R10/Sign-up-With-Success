@@ -1,25 +1,203 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=Roboto:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
-:root{
 
+:root {
     --Tomato: hsl(4, 100%, 67%);
-     --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
     --Charcoal-Grey: hsl(235, 18%, 26%);
     --Grey: hsl(231, 7%, 60%);
     --White: hsl(0, 0%, 100%);
-
 }
 
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.img{
+body{
+background-color: var(--Charcoal-Grey);
+min-height: 100vh;
+font-size: 16px;
+line-height: 1.8;
+font-family: 'Roboto';
+display: grid;
+place-content: center;
+}
+.container{
+max-width: 955px;
+margin: 0 auto;
+background-color: var(--White);   
+padding: 1.5rem;
+border-radius: 1.5rem;
+display: grid;
+grid-template-columns: 1fr 1fr; 
+& .img{
+margin-left: 25px;
+}
+}
+
+.container.success{
+    display: initial;
+    padding: 3.5rem;
+}
+
+.left{
+    color: var(--Dark-Slate-Grey);
+    padding-left: 4rem 2rem 2rem 2rem;
+}
+
+.left-info h1{
+font-size: 3.5rem;
+margin-bottom: .5rem;
+}
+
+.left-info p,
+.left-info ul{
+margin-bottom: 1.5rem ;
+}
+
+.left-info ul li{
+    list-style-image: url(/assets/images/icon-list.svg);
+    list-style-position: inside;
+
+}
+
+.left-info ul li::before{
+    content: '';
+    margin-right: .5rem;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item label{
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-item label .invalid-email{
+    color: var(--Tomato);
+display: none;
+}
+
+.form-item label .invalid-email.active {
+display: block;
+}
+
+.form-item input,
+.form-item button{
+padding: 1rem;
+margin-bottom: 1.5rem;
+border-radius: 8px;
+}
+
+.form-item input{
+    border: 1px solid var(--Grey);
+}
+
+.form-item input.active{
+    background-color: rgb(255, 98,87, 0.2);
+    border: 1px solid var(--Tomato);
+}
+
+.form-item button{
+    cursor: pointer;
+    background: var(--Dark-Slate-Grey);
+    color: var(--White);
+    font-weight: 700;
+    outline: none;
+    border: none;
+}
+
+.form-item button:hover{
+    background: linear-gradient(127deg, rgba (255, 63, 124,1)40%, rgba(255, 154,34,1)
+    70%);
+}
+
+.right{
+    text-align: right;
+}
+
+.confirmed-message{
+    display: none;
+    line-height: 1.2;
+}
+
+.conconfirmed-message.active{
+    display: block;
+}
+
+.conconfirmed-message img{
+    width: 8px;
+}
+.conconfirmed-message h2{
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.conconfirmed-message p{
+    margin: 2rem 0;
+}
+.conconfirmed-message button{
+    cursor: pointer;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    font-weight: 700;
     width: 100%;
-    height: auto;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
 }
 
+.conconfirmed-message button:hover{
+    background: linear-gradient(127deg, rgba(255,63,124,1)40%,
+    rgba(255,154,34,1)70%);
+}
 
+#user-email{
+    font-weight: 700;
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@media (max-width: 768px ) {
+    body{
+        display: initial;
+    line-height: 1.4;
+    }
+.container{
+    width: 100%;
+    height: initial;
+    padding: 0;
+    grid-template-columns: 1fr ;
+}
+
+.container.success{
+    display: block;
+    padding: initial;
+}
+
+.left{
+    padding: 1rem 2rem;
+    grid-row: 2;
+}
+
+.left-info ul li{
+margin-bottom: 1rem;
+}
+
+.right img{
+    
+    width: 100%;
+    margin-right: 10px 10px 10px 10px; 
+}
+
+.conconfirmed-message{
+height: 100vh;
+}
+
+}
