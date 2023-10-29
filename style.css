@@ -31,9 +31,7 @@ padding: 1.5rem;
 border-radius: 1.5rem;
 display: grid;
 grid-template-columns: 1fr 1fr; 
-& .img{
-margin-left: 25px;
-}
+
 }
 
 .container.success{
@@ -57,7 +55,7 @@ margin-bottom: 1.5rem ;
 }
 
 .left-info ul li{
-    list-style-image: url(/assets/images/icon-list.svg);
+    list-style-image: url(assets/images/icon-list.svg);
     list-style-position: inside;
 
 }
@@ -88,13 +86,13 @@ display: none;
 .form-item label .invalid-email.active {
 display: block;
 }
-
 .form-item input,
 .form-item button{
 padding: 1rem;
 margin-bottom: 1.5rem;
 border-radius: 8px;
 }
+
 
 .form-item input{
     border: 1px solid var(--Grey);
@@ -128,22 +126,22 @@ border-radius: 8px;
     line-height: 1.2;
 }
 
-.conconfirmed-message.active{
+.confirmed-message.active{
     display: block;
 }
 
-.conconfirmed-message img{
-    width: 8px;
+.confirmed-message img{
+    width: 80px;
 }
-.conconfirmed-message h2{
+.confirmed-message h2{
     font-size: 3rem;
     margin-top: 2rem;
 }
 
-.conconfirmed-message p{
+.confirmed-message p{
     margin: 2rem 0;
 }
-.conconfirmed-message button{
+.confirmed-message button{
     cursor: pointer;
     background-color: var(--Dark-Slate-Grey);
     color: var(--White);
@@ -155,7 +153,7 @@ border-radius: 8px;
     outline: none;
 }
 
-.conconfirmed-message button:hover{
+.confirmed-message button:hover{
     background: linear-gradient(127deg, rgba(255,63,124,1)40%,
     rgba(255,154,34,1)70%);
 }
@@ -164,40 +162,52 @@ border-radius: 8px;
     font-weight: 700;
 }
 
-@media (max-width: 768px ) {
-    body{
+/* Tus estilos CSS anteriores aquí */
+
+@media (max-width: 768px) {
+    body {
         display: initial;
-    line-height: 1.4;
+        line-height: 1.4;
     }
-.container{
-    width: 100%;
-    height: initial;
-    padding: 0;
-    grid-template-columns: 1fr ;
-}
 
-.container.success{
-    display: block;
-    padding: initial;
-}
+    .container {
+        width: 100%;
+        height: initial;
+        padding: 0;
+        grid-template-columns: 1fr;
+       
+    }
 
-.left{
-    padding: 1rem 2rem;
-    grid-row: 2;
-}
+    .container.success {
+        display: block;
+        padding: initial;
+    }
 
-.left-info ul li{
-margin-bottom: 1rem;
-}
+    .left {
+        padding: 1rem 2rem;
+        grid-row: 2;
+    }
 
-.right img{
-    
-    width: 100%;
-    margin-right: 10px 10px 10px 10px; 
-}
+    .left-info ul li {
+        margin-bottom: 1rem; 
+    }
 
-.conconfirmed-message{
+    .right img {
+        width: 100%;
+        /* margin-left: -25px; */
+        /* height: auto; */
+        /* border: solid 1px red; */
+    }
+    .confirmed-message.active{
 height: 100vh;
+padding: 14rem 2rem 2rem 2rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+    }
+    .confirmed-message button{
+        margin-top: auto;
+    }
 }
 
-}
+
